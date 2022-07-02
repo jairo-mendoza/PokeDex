@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-// Accept a general url that holds json and how the json data should look like
-function RetrievePokemon() {
+// Collects data from the PokeAPI, individual pokemon are
+// stored as an Object in a list
+const RetrievePokemon = () => {
   const [pokemon, setPokemon] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -29,6 +30,6 @@ function RetrievePokemon() {
   }, []);
 
   return pokemon;
-}
+};
 
 export default RetrievePokemon;

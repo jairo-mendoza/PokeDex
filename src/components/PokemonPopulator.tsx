@@ -6,7 +6,9 @@ function PokemonPopulator() {
   console.log(pokeData);
   return (
     <div>
-      <p>E</p>
+      {pokeData.map((currentPokemon, index) => {
+        return <p key={index}>{currentPokemon["name"]}</p>;
+      })}
     </div>
   );
 }
