@@ -1,8 +1,8 @@
 import "./App.css";
-import RetrievePokemon from "./services/PokemonRetriever";
+import PokemonPopulator from "./components/PokemonPopulator";
 
 function App() {
-  return <RetrievePokemon />;
+  return <PokemonPopulator />;
 }
 
 export default App;
