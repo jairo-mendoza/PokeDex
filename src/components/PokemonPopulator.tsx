@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
-import Alert from "react-bootstrap/Alert";
 import RetrievePokemon from "../services/PokemonRetriever";
+import PokeCell from "./poketable/PokeCell";
 
 function PokemonPopulator() {
   const pokeData = RetrievePokemon();
@@ -9,22 +9,14 @@ function PokemonPopulator() {
   return (
     <div>
       <Row>
-        {pokeData.map((currentPokemon, index) => {
+        {pokeData.map((currentPoke, index) => {
           return (
-            <Col
-              key={currentPokemon["id"]}
-              xs={12}
-              sm={12}
-              md={4}
-              lg={4}
-              xl={2}
-            >
-              <img
-                src={currentPokemon["sprites"]["front_default"]}
-                alt={currentPokemon["name"]}
-              />
-              <p>{currentPokemon["name"]}</p>
-            </Col>
+            <PokeCell
+              id={currentPoke["id"]}
+              sprite={currentPoke["sprites"]["front_default"]}
+              name={currentPoke["name"]}
+              type={currentPoke["types"][0]["type"]["name"]}
+            />
           );
         })}
       </Row>
