@@ -1,8 +1,9 @@
 import { Row } from "react-bootstrap";
-import RetrievePokemon from "../services/PokemonRetriever";
-import PokeCell from "./poketable/cells";
 
-function PokemonPopulator() {
+import RetrievePokemon from "../../services/PokemonRetriever";
+import PokeCell from "./cells";
+
+function PokeTable() {
   const pokeData = RetrievePokemon();
   console.log(pokeData);
   return (
@@ -23,4 +24,4 @@ function PokemonPopulator() {
   );
 }
 
-export default PokemonPopulator;
+export default PokeTable;

@@ -1,8 +1,8 @@
 import "./App.css";
-import PokemonPopulator from "./components/PokemonPopulator";
+import PokeTable from "./components/poketable";
 
 function App() {
-  return <PokemonPopulator />;
+  return <PokeTable />;
 }
 
 export default App;
