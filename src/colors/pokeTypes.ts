@@ -1,5 +1,8 @@
 // Using hexcode that were provided by Bulbapedia
 // https://bulbapedia.bulbagarden.net/wiki/Category:Type_color_templates
+//
+// Colors corresponding to the pokemon type
+// TODO: Figure out a way to work with pokemon who may have multiple types
 
 export const color: any = {
   bug: "#A8B820",

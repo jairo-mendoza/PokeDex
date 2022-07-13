@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import RetrievePokemon from "../services/PokemonRetriever";
-import PokeCell from "./poketable/PokeCell";
+import PokeCell from "./poketable/cells";
 
 function PokemonPopulator() {
   const pokeData = RetrievePokemon();
