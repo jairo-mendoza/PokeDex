@@ -7,7 +7,7 @@ import { color } from "../../../colors/pokeTypes";
 // Styling
 const PokeCard = styled(Card)`
   margin-bottom: 1em;
-  background-color: ${(props) => props.backgroundColor || "white"};
+  background-color: ${(props) => props.background || "white"};
   cursor: pointer;
 `;
 
@@ -30,7 +30,7 @@ const PokeCell = (props: any) => {
 
   return (
     <Col key={props.id} xs={6} sm={4} md={4} lg={3} xl={2} xxl={2}>
-      <PokeCard backgroundColor={color[props.type]} onClick={openPokeData}>
+      <PokeCard background={color[props.type]} onClick={openPokeData}>
         <Sprite src={props.sprite} alt={props.name} />
         <Text>{props.name}</Text>
         <Text>{props.type}</Text>
