@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Card } from "react-bootstrap";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 import { color } from "../../../colors/pokeTypes";
 
@@ -37,6 +38,13 @@ const PokeCell = (props: any) => {
       </PokeCard>
     </Col>
   );
+};
+
+PokeCell.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  sprite: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default PokeCell;

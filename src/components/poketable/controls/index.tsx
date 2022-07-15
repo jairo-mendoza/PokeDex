@@ -1,5 +1,12 @@
+import PokeTable from "../";
+
 const TableControlBar = () => {
-  return <div>Test</div>;
+  const pokeCards = document.querySelectorAll(".card");
+  return (
+    <div>
+      Displaying {pokeCards.length} of {pokeCards.length} Pokemon
+    </div>
+  );
 };
 
 export default TableControlBar;
