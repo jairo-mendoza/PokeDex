@@ -1,6 +1,4 @@
 import React from "react";
-import PokeTable from "../";
-import PokeSearch from "./PokeSearch";
 
 const TableControlBar = () => {
     const pokeCards = document.querySelectorAll(".card");

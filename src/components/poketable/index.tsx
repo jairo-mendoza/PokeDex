@@ -1,8 +1,8 @@
-import { createContext } from "react";
 import styled from "styled-components";
 
 import { Row } from "react-bootstrap";
 
+import { Pokemon } from "../../services/Pokemon";
 import RetrievePokemon from "../../services/PokemonRetriever";
 import TableControlBar from "./controls";
 import PokeCell from "./cells";
@@ -13,10 +13,8 @@ const StyledPokeTable = styled("div")`
     margin-right: 10px;
 `;
 
-//const context = createContext();
-
 function PokeTable() {
-    const pokeData = RetrievePokemon();
+    const pokeData: Pokemon[] = RetrievePokemon();
     return (
         <StyledPokeTable>
             <TableControlBar />
