@@ -4,9 +4,8 @@ import axios from "axios";
 
 // Collects data from the PokeAPI, individual pokemon are
 // stored as an Object in a list
-const RetrievePokemon = () => {
+const RetrievePokemon = (): Pokemon[] => {
     const [pokemon, setPokemon] = useState<Pokemon[]>([]);
-    const [isLoading, setIsLoading] = useState(true);
 
     const getSpecificPokemonData = async (pokeId: number) => {
         const response = await axios.get(
@@ -22,7 +21,6 @@ const RetrievePokemon = () => {
         }
 
         setPokemon(pokemonArr);
-        setIsLoading(false);
     };
 
     // Runs as soon as the page is loaded

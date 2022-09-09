@@ -22,6 +22,7 @@ const Sprite = styled.img`
 const Text = styled.p`
     color: white;
     text-align: center;
+    text-transform: capitalize;
 `;
 
 const PokeCell = (props: any) => {
