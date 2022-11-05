@@ -4,8 +4,8 @@ import axios from "axios";
 
 // Collects data from the PokeAPI, individual pokemon are
 // stored as an Object in a list
-const RetrievePokemon = (): Pokemon[] => {
-    const [pokemon, setPokemon] = useState<Pokemon[]>([]);
+const RetrievePokemon = (): Map<string, Pokemon> => {
+    const [pokemon, setPokemon] = useState<Map<string, Pokemon>>(new Map());
 
     const getSpecificPokemonData = async (pokeId: number) => {
         const response = await axios.get(
@@ -15,12 +15,13 @@ const RetrievePokemon = (): Pokemon[] => {
     };
 
     const getPokemon = async () => {
-        let pokemonArr: Pokemon[] = [];
+        let pokemonDatabase: Map<string, Pokemon> = new Map();
         for (let i = 1; i <= 151; i++) {
-            pokemonArr.push(await getSpecificPokemonData(i));
+            const curPoke: Pokemon = await getSpecificPokemonData(i);
+            pokemonDatabase.set(curPoke.name, curPoke); // pokemonDatabase.set(key, value)
         }
 
-        setPokemon(pokemonArr);
+        setPokemon(pokemonDatabase);
     };
 
     // Runs as soon as the page is loaded

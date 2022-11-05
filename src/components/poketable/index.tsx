@@ -15,14 +15,16 @@ const StyledPokeTable = styled("div")`
 `;
 
 function PokeTable() {
-    const pokeData: Pokemon[] = RetrievePokemon();
+    const pokeData: Map<string, Pokemon> = RetrievePokemon();
     // TODO: Update to be more dynamic
+    // We are now using a map, I decided on this change for faster access compared to using an Array
+    // we still need to use an array to display the pokemon in a table
     return (
         <StyledPokeTable>
-            {pokeData.length === 151 ? <TableControlBar /> : null}
-            {pokeData.length === 151 ? null : <PokeballSpinner />}
+            {pokeData.size === 151 ? <TableControlBar /> : null}
+            {pokeData.size === 151 ? null : <PokeballSpinner />}
             <Row>
-                {pokeData.map((currentPoke) => {
+                {Array.from(pokeData.values()).map((currentPoke) => {
                     return (
                         <PokeCell
                             key={currentPoke.id}
