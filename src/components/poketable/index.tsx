@@ -26,13 +26,7 @@ function PokeTable() {
             <Row>
                 {Array.from(pokeData.values()).map((currentPoke) => {
                     return (
-                        <PokeCell
-                            key={currentPoke.id}
-                            id={currentPoke.id}
-                            sprite={currentPoke.sprites.front_default}
-                            name={currentPoke.name}
-                            type={currentPoke.types[0].type.name}
-                        />
+                        <PokeCell key={currentPoke.id} pokemon={currentPoke} />
                     );
                 })}
             </Row>

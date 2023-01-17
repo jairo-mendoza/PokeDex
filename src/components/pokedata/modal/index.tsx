@@ -1,6 +1,9 @@
 import Modal from "react-bootstrap/Modal";
+import { Pokemon } from "../../../services/Pokemon";
 
 const PokeModal = (props: any) => {
+    const curPokemon: Pokemon = props.pokemon;
+
     return (
         <Modal
             {...props}
@@ -10,11 +13,10 @@ const PokeModal = (props: any) => {
         >
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
-                    Modal heading
+                    {curPokemon.name}
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <h4>${props.name}</h4>
                 <p>
                     Cras mattis consectetur purus sit amet fermentum. Cras justo
                     odio, dapibus ac facilisis in, egestas eget quam. Morbi leo
