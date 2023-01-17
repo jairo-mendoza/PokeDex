@@ -6,7 +6,6 @@ import { Pokemon } from "../../services/Pokemon";
 import RetrievePokemon from "../../services/PokemonRetriever";
 import TableControlBar from "./controls";
 import PokeCell from "./cells";
-import { useEffect, useState } from "react";
 import PokeballSpinner from "./PokeballSpinner";
 
 // Styling

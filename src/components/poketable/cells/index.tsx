@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Col, Card } from "react-bootstrap";
 import styled from "styled-components";
 import PropTypes from "prop-types";
