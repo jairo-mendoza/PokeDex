@@ -95,8 +95,8 @@ interface Sprites {
         };
     };
     versions: {
-        generation_i: {
-            red_blue: {
+        "generation-i": {
+            "red-blue": {
                 back_default: string;
                 back_gray: string;
                 back_transparent: string;
@@ -113,7 +113,7 @@ interface Sprites {
                 front_transparent: string;
             };
         };
-        generation_ii: {
+        "generation-ii": {
             crystal: {
                 back_default: string;
                 back_shiny: string;
@@ -139,26 +139,26 @@ interface Sprites {
                 front_transparent: string;
             };
         };
-        generation_iii: {
+        "generation-iii": {
             emerald: {
                 front_default: string;
                 front_shiny: string;
             };
-            firered_leafgreen: {
+            "firered-leafgreen": {
                 back_default: string;
                 back_shiny: string;
                 front_default: string;
                 front_shiny: string;
             };
-            ruby_sapphire: {
+            "ruby-sapphire": {
                 back_default: string;
                 back_shiny: string;
                 front_default: string;
                 front_shiny: string;
             };
         };
-        generation_iv: {
-            diamond_pearl: {
+        "generation-iv": {
+            "diamond-pearl": {
                 back_default: string;
                 back_female: string;
                 back_shiny: string;
@@ -169,8 +169,8 @@ interface Sprites {
                 front_shiny_female: string;
             };
         };
-        generation_v: {
-            black_white: {
+        "generation-v": {
+            "black-white": {
                 animated: {
                     back_default: string;
                     back_female: string;
@@ -205,19 +205,19 @@ interface Sprites {
                 front_shiny_female: string;
             };
         };
-        generation_vii: {
+        "generation-vii": {
             icons: {
                 front_default: string;
                 front_female: string;
             };
-            ultra_sun_ultra_moon: {
+            "ultra-sun-ultra-moon": {
                 front_default: string;
                 front_female: string;
                 front_shiny: string;
                 front_shiny_female: string;
             };
         };
-        generation_viii: {
+        "generation-viii": {
             icons: {
                 front_default: string;
                 front_female: string;
