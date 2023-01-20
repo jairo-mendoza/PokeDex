@@ -25,11 +25,20 @@ const Text = styled.p`
     color: white;
     text-align: center;
     text-transform: capitalize;
+    font-weight: bold;
+`;
+
+const TypeIconContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
 `;
 
 const TypeIcon = styled.img`
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 25px;
+    max-height: 25px;
 `;
 
 const PokeCell = (props: any) => {
@@ -54,9 +63,16 @@ const PokeCell = (props: any) => {
                         alt={curPokemon.name}
                     />
                     <Text>{curPokemon.name}</Text>
-                    {curPokemon.types.map((curType) => {
-                        return <TypeIcon src={icon[curType.type.name]} />;
-                    })}
+                    <TypeIconContainer>
+                        {curPokemon.types.map((curType) => {
+                            return (
+                                <TypeIcon
+                                    key={curType.slot}
+                                    src={icon[curType.type.name]}
+                                />
+                            );
+                        })}
+                    </TypeIconContainer>
                 </PokeCard>
             </Col>
 
