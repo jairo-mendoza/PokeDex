@@ -3,7 +3,7 @@ import { Col, Card } from "react-bootstrap";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import { color } from "../../../colors/pokeTypes";
+import { color, icon } from "../../../colors/pokeTypes";
 import PokeModal from "../../pokedata/modal";
 import { Pokemon } from "../../../services/Pokemon";
 
@@ -25,6 +25,11 @@ const Text = styled.p`
     color: white;
     text-align: center;
     text-transform: capitalize;
+`;
+
+const TypeIcon = styled.img`
+    max-width: 40px;
+    max-height: 40px;
 `;
 
 const PokeCell = (props: any) => {
@@ -49,7 +54,9 @@ const PokeCell = (props: any) => {
                         alt={curPokemon.name}
                     />
                     <Text>{curPokemon.name}</Text>
-                    <Text>{curPokemon.types[0].type.name}</Text>
+                    {curPokemon.types.map((curType) => {
+                        return <TypeIcon src={icon[curType.type.name]} />;
+                    })}
                 </PokeCard>
             </Col>
 
