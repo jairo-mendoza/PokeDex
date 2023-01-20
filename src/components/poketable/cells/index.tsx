@@ -25,6 +25,7 @@ const Text = styled.p`
     color: white;
     text-align: center;
     text-transform: capitalize;
+    font-weight: bold;
 `;
 
 const TypeIconContainer = styled.div`
