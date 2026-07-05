@@ -1,8 +1,8 @@
-import "./App.css";
-import PokeTable from "./components/poketable";
-
-function App() {
-    return <PokeTable />;
+export default function App() {
+    return (
+        <main>
+            <h1>Pokédex</h1>
+            <p>Rebuild in progress.</p>
+        </main>
+    )
 }
-
-export default App;

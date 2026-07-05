@@ -1,15 +1,20 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
-/coverage
+# yarn (berry): keep the pinned release, ignore the rest
+.yarn/*
+!.yarn/releases
+!.yarn/patches
+.yarn/install-state.gz
 
-# production
-/build
+# build output
+/dist
+
+# vite / ts
+.vite
+*.tsbuildinfo
 
 # misc
 .DS_Store
