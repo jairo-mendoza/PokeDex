@@ -12,8 +12,7 @@
         "build": "tsc -b && vite build",
         "preview": "vite preview",
         "lint": "oxlint",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist"
+        "deploy": "yarn build && gh-pages -d dist"
     },
     "dependencies": {
         "react": "^19.2.7",
