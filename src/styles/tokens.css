@@ -1,0 +1,127 @@
+/* Token system for the PokeDex field guide.
+   Dark is the default theme. Light theme is preserved for a future light mode. */
+
+:root {
+	/* Dark theme */
+	--bg: #171b17;
+	--bg-alt: #1d221d;
+	--surface: #20261f;
+	--ink: #ebe9df;
+	--ink-2: #a9ae9f;
+	--ink-3: #70766a;
+	--line: #2b312a;
+	--line-2: #363d35;
+	--accent: #9dc178;
+	--accent-ink: color-mix(in oklab, var(--accent) 62%, var(--ink));
+	--accent-soft: color-mix(in oklab, var(--accent) 14%, var(--surface));
+	--spark: #ec9350;
+	--spark-ink: color-mix(in oklab, var(--spark) 70%, var(--ink));
+	--spark-soft: color-mix(in oklab, var(--spark) 13%, var(--surface));
+	--scrim: rgba(8, 10, 7, 0.55);
+
+	/* type-tag mix ratios: tags blend the specimen hue into surface and ink */
+	--mix-tag-bg: 20%;
+	--mix-tag-fg: 70%;
+
+	/* type */
+	--font-display: 'Source Serif 4', Georgia, serif;
+	--font-ui: 'Instrument Sans', system-ui, sans-serif;
+	--font-mono: 'Spline Sans Mono', ui-monospace, SFMono-Regular, monospace;
+	--fs-2xs: 10.5px;
+	--fs-xs: 11.5px;
+	--fs-sm: 13px;
+	--fs-base: 14.5px;
+	--fs-md: 17px;
+	--fs-lg: 22px;
+	--fs-xl: 30px;
+	--fs-2xl: 42px;
+
+	/* space */
+	--sp-1: 4px;
+	--sp-2: 8px;
+	--sp-3: 12px;
+	--sp-4: 16px;
+	--sp-5: 24px;
+	--sp-6: 32px;
+	--sp-7: 48px;
+	--sp-8: 72px;
+
+	/* radii */
+	--r-sm: 4px;
+	--r-md: 10px;
+	--r-lg: 16px;
+	--r-pill: 999px;
+
+	/* motion */
+	--t-fast: 120ms;
+	--t-base: 160ms;
+	--t-slow: 200ms;
+	--ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+
+	/* grid */
+	--card-w: 224px;
+	--grid-gap: 20px;
+}
+
+/* Light theme. Preserved for future work. Dormant for now. */
+:root[data-theme='field'] {
+	--bg: #faf9f6;
+	--bg-alt: #f2f0e9;
+	--surface: #ffffff;
+	--ink: #20251f;
+	--ink-2: #5d6357;
+	--ink-3: #9aa092;
+	--line: #e7e4da;
+	--line-2: #d8d4c7;
+	--accent: #7fa65a;
+	--spark: #e8863a;
+	--scrim: rgba(24, 26, 20, 0.38);
+	--mix-tag-bg: 13%;
+	--mix-tag-fg: 58%;
+}
+
+@media (max-width: 760px) {
+	:root {
+		--card-w: calc((100vw - 48px) / 2);
+		--grid-gap: 12px;
+		--fs-2xl: 31px;
+		--fs-xl: 25px;
+		--sp-6: 18px;
+		--sp-8: 48px;
+	}
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: 150% 0;
+	}
+	100% {
+		background-position: -150% 0;
+	}
+}
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes grow {
+	from {
+		transform: scaleX(0);
+	}
+}

@@ -1,11 +1,31 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: var(--bg);
+	color: var(--ink);
+	font-family: var(--font-ui);
+	font-size: var(--fs-base);
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+select {
+	font: inherit;
+	color: inherit;
+}
+
+::selection {
+	background: color-mix(in oklab, var(--accent) 30%, transparent);
 }
