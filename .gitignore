@@ -3,6 +3,12 @@
 /.pnp
 .pnp.js
 
+# yarn (berry): keep the pinned release, ignore the rest
+.yarn/*
+!.yarn/releases
+!.yarn/patches
+.yarn/install-state.gz
+
 # build output
 /dist
 
