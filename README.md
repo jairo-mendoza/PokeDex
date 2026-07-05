@@ -1,5 +1,7 @@
-More to come soon!
+# Pokédex
 
-_For a (very unpolished) demo, visit:_ [pokedex.jairom.com](https://pokedex.jairom.com)
+_Rebuilding my old Pokédex from the ground up._
 
-_May take a while to load when opening the website for the first time._
+Right now it's a fresh Vite + React 19 + TypeScript project. The actual dex (browsing every generation, search, and per-Pokémon detail views) is next.
+
+_For the (very unfinished) current demo, visit:_ [pokedex.jairom.com](https://pokedex.jairom.com)
