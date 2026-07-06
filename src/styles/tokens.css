@@ -23,6 +23,13 @@
 	--mix-tag-bg: 20%;
 	--mix-tag-fg: 70%;
 
+	/* mythical foil: holographic stamp stops, theme-independent */
+	--foil-a: #efa9d4;
+	--foil-b: #8cc8ec;
+	--foil-c: #a9df9c;
+	--foil-d: #f5ce8c;
+	--foil-ink: #343931;
+
 	/* type */
 	--font-display: 'Source Serif 4', Georgia, serif;
 	--font-ui: 'Instrument Sans', system-ui, sans-serif;
@@ -123,5 +130,14 @@
 @keyframes grow {
 	from {
 		transform: scaleX(0);
+	}
+}
+
+@keyframes foil {
+	from {
+		background-position: 0% 0;
+	}
+	to {
+		background-position: 100% 0;
 	}
 }

@@ -34,7 +34,14 @@ export default function PokemonCard({ entry, onOpen }: PokemonCardProps) {
 		>
 			<div className="card__head">
 				<span className="card__num">#{pad(entry.id)}</span>
-				{entry.legendary && <span className="card__badge">LEGENDARY</span>}
+				{entry.legendary && (
+					<span className="card__badge card__badge--legendary">
+						LEGENDARY
+					</span>
+				)}
+				{entry.mythical && (
+					<span className="card__badge card__badge--foil">MYTHICAL</span>
+				)}
 			</div>
 			<div className="card__imgbox">
 				<div

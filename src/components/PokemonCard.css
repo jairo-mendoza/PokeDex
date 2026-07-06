@@ -52,11 +52,36 @@
 	font-family: var(--font-mono);
 	font-size: 9.5px;
 	letter-spacing: 0.14em;
-	color: var(--spark-ink);
-	background: var(--spark-soft);
-	border: 1px solid color-mix(in oklab, var(--spark) 30%, var(--line));
+	border: 1px solid;
 	border-radius: var(--r-pill);
 	padding: 2px 8px;
+}
+
+.card__badge--legendary {
+	color: var(--spark-ink);
+	background: var(--spark-soft);
+	border-color: color-mix(in oklab, var(--spark) 30%, var(--line));
+}
+
+.card__badge--foil {
+	color: var(--foil-ink);
+	background: linear-gradient(
+		115deg,
+		var(--foil-a) 0%,
+		var(--foil-b) 30%,
+		var(--foil-c) 58%,
+		var(--foil-d) 82%,
+		var(--foil-a) 100%
+	);
+	background-size: 260% 100%;
+	border-color: color-mix(in oklab, var(--foil-b) 65%, var(--line));
+	animation: foil 5s var(--ease) infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.card__badge--foil {
+		animation: none;
+	}
 }
 
 .card__imgbox {
