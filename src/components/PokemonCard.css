@@ -1,0 +1,134 @@
+.card {
+	width: var(--card-w);
+	text-align: left;
+	background: var(--surface);
+	border: 1px solid var(--line);
+	border-radius: var(--r-md);
+	padding: var(--sp-4);
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	gap: var(--sp-2);
+	font-family: var(--font-ui);
+	color: var(--ink);
+	transform: translateY(0);
+	transition:
+		transform var(--t-base) var(--ease),
+		border-color var(--t-base) var(--ease);
+}
+
+.card:hover {
+	transform: translateY(-3px);
+	border-color: var(--line-2);
+}
+
+.card:active {
+	transform: translateY(-1px);
+}
+
+.card:focus-visible {
+	outline: none;
+	box-shadow:
+		0 0 0 2px var(--bg),
+		0 0 0 3.5px var(--accent);
+}
+
+.card__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--sp-2);
+}
+
+.card__num {
+	font-family: var(--font-mono);
+	font-size: var(--fs-xs);
+	letter-spacing: 0.08em;
+	color: var(--ink-3);
+	font-variant-numeric: tabular-nums;
+}
+
+.card__badge {
+	font-family: var(--font-mono);
+	font-size: 9.5px;
+	letter-spacing: 0.14em;
+	color: var(--spark-ink);
+	background: var(--spark-soft);
+	border: 1px solid color-mix(in oklab, var(--spark) 30%, var(--line));
+	border-radius: var(--r-pill);
+	padding: 2px 8px;
+}
+
+.card__imgbox {
+	aspect-ratio: 1 / 1;
+	width: 100%;
+	position: relative;
+	border-radius: var(--r-sm);
+	overflow: hidden;
+}
+
+.card__skel {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		100deg,
+		var(--bg-alt) 32%,
+		var(--line) 50%,
+		var(--bg-alt) 68%
+	);
+	background-size: 200% 100%;
+	animation: shimmer 1.4s linear infinite;
+	transition: opacity var(--t-slow) var(--ease);
+}
+
+.card__skel[data-hidden='true'] {
+	opacity: 0;
+}
+
+.card__skel[data-failed='true'] {
+	animation: none;
+	opacity: 0.5;
+}
+
+.card__img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	padding: 6%;
+	opacity: 0;
+	transition: opacity var(--t-slow) var(--ease);
+}
+
+.card__img[data-loaded='true'] {
+	opacity: 1;
+}
+
+.card__name {
+	font-family: var(--font-display);
+	font-weight: 600;
+	font-size: var(--fs-md);
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 2px;
+}
+
+.card__types {
+	display: flex;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+
+.card__type {
+	font-family: var(--font-mono);
+	font-size: var(--fs-2xs);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	padding: 3px 10px;
+	border-radius: var(--r-pill);
+	background: color-mix(in oklab, var(--type-color) var(--mix-tag-bg), var(--surface));
+	color: color-mix(in oklab, var(--type-color) var(--mix-tag-fg), var(--ink));
+}
