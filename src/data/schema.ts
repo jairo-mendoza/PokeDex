@@ -21,11 +21,11 @@ export interface PokedexEntry {
 	gen: number
 	statTotal: number
 	legendary: boolean
+	mythical: boolean
 }
 
 export interface PokemonDetail extends PokedexEntry {
 	genus: string
-	mythical: boolean
 	stats: BaseStats
 	height: number
 	weight: number

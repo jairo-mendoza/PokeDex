@@ -237,6 +237,7 @@ async function main() {
 		gen: d.gen,
 		statTotal: d.statTotal,
 		legendary: d.legendary,
+		mythical: d.mythical,
 	}))
 
 	await writeFile(INDEX_OUT, JSON.stringify(index) + '\n')
