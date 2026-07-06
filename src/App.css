@@ -1,0 +1,74 @@
+.app {
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+}
+
+.masthead {
+	padding: var(--sp-6) var(--sp-6) var(--sp-5);
+}
+
+.masthead__titles {
+	display: flex;
+	align-items: baseline;
+	gap: var(--sp-3);
+	flex-wrap: wrap;
+}
+
+.masthead__title {
+	margin: 0;
+	font-family: var(--font-display);
+	font-weight: 600;
+	font-size: var(--fs-xl);
+	letter-spacing: -0.01em;
+}
+
+.masthead__eyebrow {
+	font-family: var(--font-mono);
+	font-size: var(--fs-2xs);
+	letter-spacing: 0.16em;
+	color: var(--ink-3);
+	text-transform: uppercase;
+}
+
+.masthead__subtitle {
+	margin: 6px 0 0;
+	font-family: var(--font-display);
+	font-style: italic;
+	color: var(--ink-2);
+	font-size: var(--fs-md);
+	text-wrap: pretty;
+}
+
+.record {
+	flex: 1;
+	min-width: 0;
+	padding: var(--sp-5) var(--sp-6) var(--sp-7);
+}
+
+.record__placeholder {
+	color: var(--ink-2);
+	font-family: var(--font-display);
+	font-style: italic;
+	font-size: var(--fs-md);
+}
+
+.colophon {
+	border-top: 1px solid var(--line);
+	padding: var(--sp-5) var(--sp-6);
+	display: flex;
+	justify-content: space-between;
+	gap: var(--sp-4);
+	flex-wrap: wrap;
+}
+
+.colophon__mark {
+	font-family: var(--font-mono);
+	font-size: var(--fs-2xs);
+	letter-spacing: 0.14em;
+	color: var(--ink-3);
+}
+
+.colophon__mark--end {
+	text-align: right;
+}
