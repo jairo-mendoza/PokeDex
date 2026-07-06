@@ -1,4 +1,5 @@
 import { TOTAL } from './data/pokedex'
+import PokedexGrid from './components/PokedexGrid'
 import './App.css'
 
 export default function App() {
@@ -15,9 +16,7 @@ export default function App() {
 			</header>
 
 			<main className="record">
-				<p className="record__placeholder">
-					{TOTAL} species on record. Grid coming next in WP2.
-				</p>
+				<PokedexGrid />
 			</main>
 
 			<footer className="colophon">

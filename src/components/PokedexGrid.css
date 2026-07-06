@@ -1,0 +1,44 @@
+.gen {
+	margin-bottom: var(--sp-7);
+	scroll-margin-top: 140px;
+}
+
+.gen__header {
+	display: flex;
+	align-items: baseline;
+	gap: var(--sp-3);
+	border-bottom: 1px solid var(--line-2);
+	padding-bottom: var(--sp-2);
+	margin-bottom: var(--sp-5);
+	flex-wrap: wrap;
+}
+
+.gen__title {
+	margin: 0;
+	font-family: var(--font-display);
+	font-size: var(--fs-lg);
+	font-weight: 600;
+	letter-spacing: -0.005em;
+}
+
+.gen__meta {
+	font-family: var(--font-mono);
+	font-size: var(--fs-2xs);
+	letter-spacing: 0.14em;
+	color: var(--ink-3);
+	text-transform: uppercase;
+}
+
+.gen__count {
+	margin-left: auto;
+	font-family: var(--font-mono);
+	font-size: var(--fs-2xs);
+	letter-spacing: 0.1em;
+	color: var(--ink-3);
+}
+
+.gen__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, var(--card-w));
+	gap: var(--grid-gap);
+}

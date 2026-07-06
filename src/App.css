@@ -46,13 +46,6 @@
 	padding: var(--sp-5) var(--sp-6) var(--sp-7);
 }
 
-.record__placeholder {
-	color: var(--ink-2);
-	font-family: var(--font-display);
-	font-style: italic;
-	font-size: var(--fs-md);
-}
-
 .colophon {
 	border-top: 1px solid var(--line);
 	padding: var(--sp-5) var(--sp-6);
